@@ -12,3 +12,12 @@ Now check your running api:
 ```
 curl http://127.0.0.1:8000/healthcheck
 ```
+
+# Run with Docker
+```
+docker build -t fastapi_skeleton .
+docker run -d -p 8000:8000 fastapi_skeleton
+curl http://127.0.0.1:8000/healthcheck
+```
+
+# Deploy on Kubernetes
