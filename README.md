@@ -21,3 +21,6 @@ curl http://127.0.0.1:8000/healthcheck
 ```
 
 # Deploy on Kubernetes
+```
+kubectl apply -f ./k8s/.
+```

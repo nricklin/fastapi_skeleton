@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-deployment
+  labels:
+    app: fastapi-skeleton
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: fastapi-skeleton
+  template:
+    metadata:
+      labels:
+        app: fastapi-skeleton
+    spec:
+      containers:
+      - name: fastapi-skeleton
+        image: nricklin/fastapi_skeleton:latest
+        ports:
+        - containerPort: 8000
